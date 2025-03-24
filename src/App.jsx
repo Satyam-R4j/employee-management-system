@@ -1,7 +1,12 @@
 import React from "react";
+import Login from "./components/Auth/Login";
 
 function App() {
-  return <div className="text-white">App</div>;
+  return (
+    <>
+      <Login/>
+    </>
+  );
 }
 
 export default App;
