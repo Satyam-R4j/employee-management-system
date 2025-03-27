@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../Other/Header";
-import TaskListNumbers from "../TaskList/TaskListNumbers";
+import TaskListNumbers from "../Other/TaskListNumbers";
 import TaskList from "../TaskList/TaskList";
 
 function EmployeeDashboard() {

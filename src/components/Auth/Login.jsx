@@ -18,7 +18,7 @@ const Login = () => {
           onSubmit={(e) => {
             submitHandler(e);
           }}
-          className="flex flex-col items-center justify-center"
+          className="flex flex-col text-white items-center justify-center"
           action=""
         >
           <input
