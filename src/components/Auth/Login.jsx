@@ -1,15 +1,14 @@
 import React, { useState } from "react";
 
-const Login = ({handleLogin}) => {
+const Login = ({ handleLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-    handleLogin(email,password)
-    console.log(e);
-    setEmail('')
-    setPassword('')
+    handleLogin(email, password);
+    setEmail("");
+    setPassword("");
   };
 
   return (
@@ -25,7 +24,6 @@ const Login = ({handleLogin}) => {
           <input
             value={email}
             onChange={(e) => {
-              console.log(e.target.value);
               setEmail(e.target.value);
             }}
             required
@@ -43,7 +41,7 @@ const Login = ({handleLogin}) => {
             type="text"
             placeholder="Enter password"
           />
-          <button className=" mt-5 bg-orange-700 font-bold text-black outline-none  py-3 text-xl rounded-full  px-5 placeholder:text-white">
+          <button className="cursor-pointer mt-5 bg-orange-700 font-bold text-black outline-none  py-3 text-xl rounded-full  px-5 placeholder:text-white">
             Log in
           </button>
         </form>
