@@ -15,10 +15,8 @@ const CompleteTask = () => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ullam
         rerum aliquam ut ad?
       </p>
-      <div className=" mt-4 ">
-        <button className="bg-green-500 py-1 px-2 text-sm">
-          Mark as Complete
-        </button>
+      <div className=" mt-2 ">
+        <button className="w-full">Completed</button>
       </div>
     </div>
   );
