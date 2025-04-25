@@ -1,4 +1,4 @@
-import React, { use, useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Login from "./components/Auth/Login";
 import EmployeeDashboard from "./components/Dashboard/EmployeeDashboard";
 import AdminDashboard from "./components/Dashboard/AdminDashboard";
@@ -10,17 +10,23 @@ function App() {
 
   const authData = useContext(AuthContext);
 
-  // useEffect(() => {
-  //   if (authData) {
-  //     const loggedInUser = localStorage.getItem("loggedInUser");
-  //     if (loggedInUser) {
-  //       setUser(loggedInUser.role);
-  //     }
-  //   }
-  // }, [authData]);
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("loggedInUser")
+    console.log(loggedInUser);
+    if(loggedInUser)
+    {
+      const userData = JSON.parse(loggedInUser)
+      console.log(userData);
+      setUser(userData.role)
+      setLoggedInUserData(userData.data)
+      
+    }
+     
+  },[]);
+  
 
   const handleLogin = (email, password) => {
-    if (email === "admin@example.com" && password === "123") {
+    if (email === "admin" && password === "123") {
       setUser("admin");
       localStorage.setItem("loggedInUser", JSON.stringify({ role: "admin" }));
     } else if (authData) {
@@ -32,7 +38,7 @@ function App() {
         setLoggedInUserData(employee);
         localStorage.setItem(
           "loggedInUser",
-          JSON.stringify({ role: "employee" })
+          JSON.stringify({ role: "employee", data:employee })
         );
       }
     } else {

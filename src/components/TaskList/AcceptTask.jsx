@@ -19,7 +19,7 @@ const AcceptTask = () => {
         <button className="bg-green-500 py-1 px-2 text-sm">
           Mark as Complete
         </button>
-        <button className="bg-red-500 py-1 px-2 text-sm">Accepted task</button>
+        <button className="bg-red-500 py-1 px-2 text-sm">Accepted Task</button>
       </div>
     </div>
   );
